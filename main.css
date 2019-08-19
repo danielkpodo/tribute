@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --heading-font: "Patua One", cursive;
+  --body-font: "Lato", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 120%;
+  font-family: var(--body-font);
+}
