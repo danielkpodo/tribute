@@ -145,12 +145,15 @@ h1 + p {
   opacity: 0.8;
 }
 
+#quote {
+  margin: 0 auto;
+}
 blockquote {
   font-style: italic;
   max-width: 545px;
   margin: 0 auto 50px auto;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 1.5em;
   color: var(--gold);
   opacity: 0.9;
