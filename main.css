@@ -10,7 +10,7 @@
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
   --heading-font: "Patua One", cursive;
   --body-font: "Lato", sans-serif;
-  --nice-color: #66fcf1 + #116466;
+  --nice-color: #66fcf1;
   --gold: #ffd700;
 }
 
@@ -107,6 +107,7 @@ h1 + p {
   text-align: center;
   font-style: italic;
   opacity: 0.5;
+  margin: 0.625em 0;
 }
 
 #tribute-info {
@@ -122,17 +123,22 @@ h1 + p {
 
 .life {
   margin: 20px 100px 0;
+  list-style: none;
 }
 
 .life li {
   font-size: 1.2rem;
-  opacity: 0.7;
-  line-height: 1.6;
+  color: #ddd;
+  line-height: 1.7;
   margin-bottom: 0.625em;
 }
 
+.life li:hover {
+  color: var(--nice-color);
+}
+
 .life li strong {
-  opacity: 1;
+  color: var(--gold);
 }
 
 .life-item {
@@ -147,6 +153,7 @@ blockquote {
   font-size: 1.2rem;
   margin-top: 1.5em;
   color: var(--gold);
+  opacity: 0.9;
 }
 
 #gallery {
@@ -163,18 +170,20 @@ blockquote {
 .photos {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  justify-content: center;
 }
 .photos img {
   max-width: 100%;
   box-shadow: var(--shadow);
   border-radius: 5px;
   transition: transform 2s;
+  opacity: 0.5;
 }
 
 .photos img:hover {
-  transform: scale(1.2);
-  opacity: 0.5;
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 #footer {
@@ -182,12 +191,16 @@ blockquote {
   margin: 0 auto;
 }
 
+#footer p {
+  color: #ddd;
+}
+
 #tribute-link {
   color: var(--gold);
   font-style: italic;
 }
 #tribute-link:hover {
-  color: #66fcf1;
+  color: var(--nice-color);
 }
 
 /* Media queries */
@@ -205,6 +218,10 @@ blockquote {
   .life {
     margin: 0 1rem;
   }
+
+  #tribute-info h2 {
+    padding: 1rem 0;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -215,7 +232,6 @@ blockquote {
       "tribute"
       "gallery"
       "footer";
-    margin: none;
   }
   p {
     font-size: 1.2rem;
@@ -223,6 +239,7 @@ blockquote {
 
   #title {
     font-size: 3rem;
+    padding: 1rem 0;
   }
 
   #img-div img {
