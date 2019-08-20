@@ -120,22 +120,22 @@ h1 + p {
   text-align: center;
 }
 
-#life {
+.life {
   margin: 20px 100px 0;
 }
 
-#life li {
+.life li {
   font-size: 1.2rem;
   opacity: 0.7;
   line-height: 1.6;
   margin-bottom: 0.625em;
 }
 
-#life li strong {
+.life li strong {
   opacity: 1;
 }
 
-#life-item {
+.life-item {
   opacity: 0.8;
 }
 
@@ -201,6 +201,10 @@ blockquote {
       "gallery gallery"
       "footer footer";
   }
+
+  .life {
+    margin: 0 1rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -234,7 +238,7 @@ blockquote {
     font-size: 2rem;
   }
 
-  #life li {
+  .life li {
     font-size: 1em;
   }
 
