@@ -52,7 +52,7 @@ h1 + p {
   grid-gap: 20px;
   grid-template-areas:
     ".... header ...."
-    "..... hero  ....."
+    "hero hero  hero"
     ".....tribute ....."
     ".....gallery......"
     "..... footer ......";
@@ -87,6 +87,7 @@ h1 + p {
 #tribute-info {
   grid-area: tribute;
   margin: 0 auto;
+  display: block;
 }
 
 #tribute-info h2 {
@@ -141,8 +142,25 @@ blockquote {
 }
 .photos img {
   max-width: 100%;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  transition: transform 2s;
+}
+
+.photos img:hover {
+  transform: scale(1.2);
+  opacity: 0.5;
 }
 
 #footer {
   grid-area: footer;
+  margin: 0 auto;
+}
+
+#tribute-link {
+  color: var(--gold);
+  font-style: italic;
+}
+#tribute-link:hover {
+  color: #66fcf1;
 }
