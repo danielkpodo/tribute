@@ -65,6 +65,31 @@ h1 + p {
 
 #title {
   font-size: 4rem;
+  animation-name: title-boss;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes title-boss {
+  0% {
+    color: var(--gold);
+  }
+
+  25% {
+    color: #66fcf1;
+  }
+
+  50% {
+    color: #116466;
+  }
+
+  75% {
+    color: teal;
+  }
+
+  100% {
+    color: var(--gold);
+  }
 }
 
 #img-div {
@@ -163,4 +188,65 @@ blockquote {
 }
 #tribute-link:hover {
   color: #66fcf1;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 700px) {
+  #main {
+    grid-template-areas:
+      "header header"
+      "hero hero"
+      "tribute tribute"
+      "gallery gallery"
+      "footer footer";
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #main {
+    grid-template-areas:
+      "header"
+      "hero"
+      "tribute"
+      "gallery"
+      "footer";
+    margin: none;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+
+  #title {
+    font-size: 3rem;
+  }
+
+  #img-div img {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  #tribute-info {
+    margin: 0;
+  }
+
+  #tribute-info h2 {
+    font-size: 2rem;
+  }
+
+  #life li {
+    font-size: 1em;
+  }
+
+  blockquote {
+    font-size: 1em;
+  }
+
+  #gallery h2 {
+    font-size: 2rem;
+  }
+
+  .photos img:hover {
+    transform: scale(1.1);
+  }
 }
