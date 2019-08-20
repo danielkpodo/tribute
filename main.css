@@ -98,7 +98,7 @@ h1 + p {
 
 #img-div img {
   max-width: 100%;
-  margin: 0 auto;
+  display: block;
   box-shadow: var(--shadow);
   border-radius: 0.625em;
 }
